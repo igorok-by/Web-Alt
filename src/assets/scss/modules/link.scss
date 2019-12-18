@@ -1,0 +1,19 @@
+.link {
+
+  &:hover {
+    
+  }
+  
+  &--nav {
+    padding: 13px 26px;
+    display: block;
+    color: $default-color;
+    transition: $default-transition;
+  }
+  
+  &--nav:hover {
+    background-color: $hover-bckgr;
+    color: $default-color;
+    text-decoration: none;
+  }
+}

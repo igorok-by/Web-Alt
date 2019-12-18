@@ -1,0 +1,48 @@
+// Font
+$mainFont                : 'Roboto', Helvetica, Arial, sans-serif;
+$secondFont              : 'Myriad Pro', Arial, sans-serif;
+// $secondFont              : 'Trirong', Georgia, serif;
+
+
+// Size
+$mainFontColor           : #000;
+$mainFontSize            : 15px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.2;
+
+$lgDesktopWidth          : 1440px;
+$desktopWidth            : 1200px;
+$smDesktopWidth          : 992px;
+$tableWidth              : 768px;
+$phoneWidth              : 576px;
+$smPhoneWidth            : 320px;
+
+// Main color
+$default-color           : #fff;
+$primary-color           : #108be9;
+$success-color           : #1ebeb4;
+$danger-color            : #ff005d;
+$warning-color           : #df7f35;
+
+// Background
+$primary-bckgr           : #fefefe;
+$default-bckgr           : #f7f7fc;
+$warning-bckgr           : #fc0;
+$dark-bckgr              : #393939;
+$hover-bckgr             : #1c1a1a;
+
+// Neutral Color
+$neutral-primary         : #595666;
+$neutral-regular         : #121212;
+$neutral-secondary       : #AEAEAE;
+$neutral-placeholder     : #CACACA;
+
+// Border Color
+$border-base             : #DCDFE6;
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
+
+// Transition
+$default-transition      : all .3s cubic-bezier(0.25, 0.1, 0.25, 1);
+$long-transition      : all .8s cubic-bezier(0.25, 0.1, 0.25, 1);

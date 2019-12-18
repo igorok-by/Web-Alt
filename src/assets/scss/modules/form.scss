@@ -1,0 +1,80 @@
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 58px;
+  padding: 26px 8px;
+  border: 3px dotted #608f7f;
+  background-color: #80c9b0;
+  text-align: center;
+
+  &__input,
+  &__submit {
+    width: 100%;
+    max-width: 284px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: rem(13) rem(15) rem(15);
+    font-size: rem(21);
+    color: #000;
+    border: 1px solid #56907c;
+    text-align: center;
+    transition: $default-transition;
+  }
+  
+  &__input::placeholder {
+    color: #808286;
+  }
+
+  &__input:focus {
+    border-color: $warning-color;
+  }
+
+  &__submit {
+    max-width: 329px;
+    font-weight: bold;
+    color: $default-color;
+    background-color: #de0d08;
+    border: none;
+  }
+
+  &__decor {
+    position: absolute;
+  }
+
+  &__decor--left {
+    left: -126px;
+  }
+
+  &__decor--right {
+    right: -126px;
+    transform: scale(-1, 1);
+  }
+
+  &__decor-arrow {
+    // @extend %icon-arrow-2;
+  }
+
+  @media screen and (max-width: $desktopWidth) {
+
+    &__decor {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tableWidth) {
+
+    flex-direction: column;
+
+    &__input,
+    &__submit {
+      max-width: 480px;
+    }
+
+    &__input {
+      margin-bottom: 10px;
+    }
+  }
+}
