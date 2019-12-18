@@ -1,44 +1,88 @@
 .form {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 58px;
-  padding: 26px 8px;
-  border: 3px dotted #608f7f;
-  background-color: #80c9b0;
-  text-align: center;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  
+  &__title {
+    margin-bottom: 15px;
+    font-family: $secondFont;
+    font-size: rem(20);
+    text-align: center;
+  }
+
+  &__title span {
+    text-transform: uppercase;
+  }
+
+  &__input-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 217px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
 
   &__input,
   &__submit {
     width: 100%;
-    max-width: 284px;
-    margin-left: 7px;
-    margin-right: 7px;
-    padding: rem(13) rem(15) rem(15);
-    font-size: rem(21);
-    color: #000;
-    border: 1px solid #56907c;
-    text-align: center;
+    padding: 12px 15px 14px 45px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #202020;
+    border: 1px solid rgba($default-color, 0.2);
+    background-color: transparent;
     transition: $default-transition;
   }
   
   &__input::placeholder {
-    color: #808286;
+    font-size: 12px;
+    color: #b6b6b6;
   }
 
-  &__input:focus {
-    border-color: $warning-color;
+  &__input:focus,
+  &__input:active {
+    border-color: $default-color;
+    background-color: $default-color;
+    outline: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+  }
+
+  &__icon--name {
+    @extend %icon-service;
+  }
+
+  &__icon--tel {
+    left: 11px;
+    @extend %icon-tel;
   }
 
   &__submit {
-    max-width: 329px;
-    font-weight: bold;
+    max-width: 161px;
+    height: 45px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    font-size: 20px;
     color: $default-color;
-    background-color: #de0d08;
+    background-color: $warning-color;
     border: none;
   }
+
+  &__submit:hover {
+    color: $primary-color;
+  }
+
 
   &__decor {
     position: absolute;

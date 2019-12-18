@@ -27,6 +27,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  line-height: $mainLineHeight;
   font-family: $mainFont;
 	font-size: $mainFontSize;
   font-weight: $mainFontWeight;
@@ -44,7 +45,11 @@ body {
 @import "modules/link";
 @import "modules/logo";
 @import "modules/banner";
-@import "modules/tile";
-@import "modules/socials";
+@import "modules/brcrumb";
 @import "modules/form";
+@import "modules/text";
+@import "modules/tile";
+@import "modules/button";
+
+@import "modules/socials";
 @import "modules/footer";

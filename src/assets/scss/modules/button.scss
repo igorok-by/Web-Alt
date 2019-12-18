@@ -1,0 +1,31 @@
+.button {
+  width: 100%;
+  padding: 15px 15px 13px;
+  font-size: 20px;
+  font-weight: 300;
+  color: $default-color;
+  text-transform: uppercase;
+  transition: $default-transition;
+  border: none;
+
+  &--warn-lg {
+    max-width: 161px;
+    height: 45px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    background-color: $warning-color;
+  }
+
+  &--light {
+    max-width: 230px;
+    color: $mainFontColor;
+    background-color: $default-color;
+  }
+
+  &--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

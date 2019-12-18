@@ -1,0 +1,18 @@
+.brcrumb {
+  
+  &__item {
+    color: #7e7e7e;
+  }
+  
+  &__item--active {
+    color: $default-color;
+  }
+
+  &__item::after {
+    content: "|";
+  }
+
+  &__item--active::after {
+    content: "";
+  }
+}

@@ -7,7 +7,6 @@ $(function () {
       openPopup = $('.tile__popup-open-js'),
       closePopup = $('.tile__popup-close'),
       classToggled = 'tile__popup--shown',
-      
       popupToggle = function () {
         $(this)
           .closest(tile)

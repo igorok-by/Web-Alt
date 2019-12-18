@@ -1,188 +1,68 @@
 .tile {
   position: relative;
-  margin-top: 65px;
-  padding: 23px 0 7px;
-  background-color: rgba(223, 228, 236, 0.7);
-  box-shadow: 0 0 15px rgba(16, 17, 17, 0.4);
+  height: 248px;
+  padding-top: 140px;
 
-  & .container-fluid {
-    padding-right: 20px;
-    padding-left: 20px;
+  &--1 {
+    background: center / cover no-repeat url(/assets/img/tile-1.png);
   }
 
-  &__img {
-    position: relative;
-    left: -10px;
+  &--2 {
+    background: center / cover no-repeat url(/assets/img/tile-2.png);
   }
 
-  &__btn {
-    display: block;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.85);
-    text-align: center;
-    transition: $default-transition;
-    cursor: pointer;
+  &--3 {
+    background: center / cover no-repeat url(/assets/img/tile-3.png);
   }
 
-  &__btn:hover {
-    text-decoration: none;
-  }
-
-  &__btn--order {
-    font-size: rem(24);
-    font-weight: bold;
-    line-height: 43px;
-    letter-spacing: rem(1.35);
-    color: $default-color;
-    text-transform: uppercase;
-    background-color: #3ab16f;
-  }
-
-  &__btn--order:hover {
-    color: $warning-color;
-  }
-  
-  &__btn--more {
-    font-size: rem(22);
-    font-weight: bold;
-    line-height: 40px;
-    letter-spacing: rem(1.25);
-    color: #b83b11;
-    border: 2px solid #e96c41;
-  }
-  
-  &__btn--more:hover {
-    color: $warning-color;
-    border-color: $warning-color;
-  }
-  
-  &__btn--warn {
-    // font-family: $linkFont;
-    font-size: rem(17);
-    color: #ab310c;
-    text-align: right;
-    text-decoration: underline dashed;
-    background-color: transparent;
-  }
-  
-  &__price {
-    padding: 9px 25px;
-    // font-family: $priceFont;
-    text-align: left;
-  }
-  
-  &__price--crossed {
-    font-size: rem(30);
-    line-height: rem(24);
-    color: #575757;
-    text-decoration: line-through;
-  }
-
-  &__price--big {
-    padding-top: 3px;
-    font-size: rem(37);
-    line-height: rem(29);
-    color: #d8481c;
-  }
-
-  &__text {
-    font-size: rem(26);
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: #000000;
-  }
-
-  &__text--warn {
-    padding-top: 15px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  &__text--green {
-    padding-top: 25px;
-    padding-right: 20px;
+  &__title {
     font-size: rem(20);
-    color: #004734;
-    text-transform: none;
+    color: $default-color;
+    text-align: center;
   }
 
-  &__popup {
+  &__back {
     position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 35px 34px 35px 22px;
-    color: #004734;
-    background-color: rgba(255, 255, 255, 0.95);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 30px 27px;
+    color: $default-color;
     opacity: 0;
     visibility: hidden;
     transition: $default-transition;
   }
+  
+  &__back--primary {
+    background-color: $primary-color;
+  }
+  
+  &__back--warning {
+    background-color: $warning-color;
+  }
 
-  &__popup--shown {
+  &__back-title {
+    margin-bottom: 20px;
+    font-size: rem(22);
+    text-align: center;
+  }
+
+  &__back-text {
+    margin-bottom: 25px;
+  }
+
+  &__back-list {
+    margin-bottom: 20px;
+    padding-left: 25px;
+
+    li {
+      margin-bottom: 7px;
+    }
+  }
+
+  &:hover &__back {
     opacity: 1;
     visibility: visible;
-  }
-
-  &__popup-text {
-    line-height: 1.2;
-  }
-
-  &__popup-text:not(:last-child) {
-    margin-bottom: 12px;
-  }
-
-  &__popup::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -6px;
-    right: 91px;
-    width: 13px;
-    height: 13px;
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: rotate(45deg);
-  }
-
-  &__popup-close {
-    position: absolute;
-    top: 1px;
-    right: 10px;
-    width: 23px;
-    height: 23px;
-    fill: #bf2426;
-    cursor: pointer;
-  }
-
-  &__popup-close svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  &__decor {
-    position: absolute;
-    top: -14.5px;
-    right: -10px;
-    background: url(/assets/img/tile-1.png) no-repeat;
-    width: 105px;
-    height: 90px;
-  }
-
-  &__decor-text {
-    position: absolute;
-    top: 25px;
-    right: 10px;
-    // font-family: $priceFont;
-    font-size: rem(26);
-    font-weight: bold;
-    line-height: rem(26);
-    color: $default-color;
   }
 
   @media screen and (min-width: $desktopWidth) {
