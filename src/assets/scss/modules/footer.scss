@@ -1,36 +1,132 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 225px;
-  padding: 70px 20px;
-  font-size: rem(17);
-  color: $default-color;
-  background-color: #a4a4a5;
+  margin-top: 55px;
+  padding-top: 40px;
+  padding-bottom: 75px;
+  font-weight: 300;
+  color: #aaa9a9;
+  background-color: $dark-bckgr;
 
-  &__text {
-    letter-spacing: rem(0.17);
-    opacity: 0.7;
+  &__logo {
+    margin-bottom: 25px;
+
+    @extend %logo-color-3;
   }
 
-  &__text:not(:last-child) {
-    margin-bottom: 10px;
+  &__contacts {
+    display: flex;
+    margin-left: 15px;
+  }
+  
+  &__icon-adress {
+    margin-top: 8px;
+    margin-right: 20px;
+
+    @extend %icon-adress;
   }
 
-  &__link {
-    color: $default-color;
-    text-decoration: underline;
+  &__adress {
+    font-size: rem(16);
+  }
+
+  &__adress p {
+    margin-bottom: 0;
+  }
+
+  &__tel2 {
+    margin-left: rem(35);
+  }
+
+  &__map {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    color: #aaa9a9;
     transition: $default-transition;
   }
 
-  &__link:hover {
-    color: $warning-color;
+  &__icon-map {
+    margin-right: 14px;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: $default-transition;
+    
+    @extend %footer-1;
+  }
+  
+  &__icon-arrow {
+    margin-right: 7px;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: $default-transition;
+    
+    @extend %icon-arrMap;
   }
 
-  @media screen and (max-width: $phoneWidth) {
+  &__map:hover &__icon-map,
+  &__map:hover &__icon-arrow,
+  &__fb:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  
+  &__map-descr {
+    max-width: 85px;
+    margin-bottom: 0;
+    font-size: rem(14);
+    text-align: center;
+  }
 
-    min-height: unset;
-    padding: 40px 20px;
+  &__map:hover {
+    color: #dedcdc;
+    text-decoration: none;
+  }
+
+  &__fb {
+    float: right;
+    width: 285px;
+    height: 276px;
+    margin-bottom: 17px;
+    background: center no-repeat url(/assets/img/footer-2.png);
+    opacity: 0.5;
+    transition: $default-transition;
+  }
+
+  &__socials {
+    float: right;
+    display: flex;
+  }
+
+  &__socials-inst,
+  &__socials-fb,
+  &__socials-vk {
+    display: block;
+    margin-left: 14px;
+  }
+
+  &__socials-inst {
+    @extend %icon-inst;
+  }
+
+  &__socials-fb {
+    @extend %icon-fb;
+  }
+
+  &__socials-vk {
+    @extend %icon-vk;
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+   
+    &__fb,
+    &__socials {
+      float: none;
+    }
+    
+    &__socials-inst,
+    &__socials-fb,
+    &__socials-vk {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
   }
 }

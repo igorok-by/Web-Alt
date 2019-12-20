@@ -3,8 +3,8 @@
   min-height: 47px;
   font-weight: 500;
   color: $default-color;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.41);
   background-color: rgba($dark-bckgr, 0.5) ;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.41);
 
   & .container {
     display: block;
@@ -21,38 +21,28 @@
     font-size: rem(16);
   }
 
-  &__link-wrap {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 13px;
-    padding-bottom: 13px;
+  & .navbar-toggler {
+    margin: 7px 0;
+    border: 1px solid $warning-color;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $warning-color;
+    }
   }
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 41px;
-    height: 41px;
-    margin-left: 15px;
-    border: 2px solid $default-color;
-    border-radius: 50%;
-    transition: $default-transition;
+  @media screen and (max-width: $smDesktopWidth) {
+
+    &__wrap {
+      height: auto;
+    }
   }
 
-  &__link:hover {
-    border-color: $warning-color;
-  }
-  
-  &__link-vk {
-    // @extend %icon-vk;
-  }
-  
-  &__link-inst {
-    // @extend %icon-inst;
-  }
-  
-  &__link-fb {
-    // @extend %icon-fb;
+  @media screen and (max-width: $phoneWidth) {
+
+    &__tel {
+      display: none;
+    }
   }
 }

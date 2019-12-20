@@ -4,6 +4,10 @@
     font-weight: 500;
   }
 
+  &--light {
+    color: $default-color;
+  }
+
   &--fs18 {
     font-size: rem(18);
   }

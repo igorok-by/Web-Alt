@@ -16,10 +16,10 @@ html {
 		font-size: 14px;
   }
   @media screen and (max-width: $tableWidth) {
-    font-size: 12px;
+    font-size: 13px;
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 10px;
+    // font-size: 12px;
   }
 }
 
@@ -33,13 +33,13 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $mainFontColor;
   background-color: $default-color;
 }
 
 
 // Modules
 
-@import "modules/main-wrapper";
 @import "modules/header";
 @import "modules/section";
 @import "modules/link";
@@ -50,6 +50,8 @@ body {
 @import "modules/text";
 @import "modules/tile";
 @import "modules/button";
-
-@import "modules/socials";
+@import "modules/list";
+@import "modules/decor";
+@import "modules/carousel";
 @import "modules/footer";
+@import "modules/menu";

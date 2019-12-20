@@ -9,12 +9,15 @@
 </head>
 
 <body>
-  <!-- Set of SVG icons -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-    <symbol id="icon-close" viewBox="0 0 23 23">
-      <g><g><path d="M3.368 3.367c4.484-4.485 11.78-4.485 16.265 0 4.485 4.484 4.485 11.78 0 16.265-4.485 4.485-11.782 4.486-16.266.001-4.485-4.484-4.484-11.782 0-16.266zm15.52 15.52c4.072-4.074 4.072-10.701 0-14.774C14.813.039 8.186.039 4.113 4.113.04 8.186.04 14.813 4.113 18.887c4.073 4.073 10.7 4.073 14.774 0zM6.046 8.032l1.987-1.987L11.5 9.512l3.466-3.466 1.988 1.987-3.466 3.466 3.466 3.466-1.988 1.988-3.466-3.466-3.465 3.465-1.987-1.988L9.513 11.5z"/></g></g>
-    </symbol>
-  </svg><!-- end Set of SVG icons -->
+
+  <!-- Set of icons -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </symbol>
+    </defs>
+  </svg><!-- end Set of icons -->
   
   <!-- Header -->
   <div class="navbar navbar-expand-lg fixed-top p-0">
@@ -29,9 +32,11 @@
               <p class="header__tel">(4212) 25-30-85</p>
             </div>
           </div>
-          <div class="col-6 col-lg-9">
+          <div class="col-6 col-lg-9 d-flex d-lg-block flex-column align-items-end">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon">
+                <svg><use xlink:href="#icon-menu"></use></svg>
+              </span>
             </button>
     
             <div class="collapse navbar-collapse" id="navbarContent">
@@ -66,16 +71,15 @@
   </div><!-- end Header -->
 
   <!-- main wrapper -->
-  <main id="mainWrap" class="main-wrapper">
-
+  <main>
     <!-- Section: Banner-Top -->
     <section class="banner banner--top">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="brcrumb">
-              <span class="brcrumb__item">Главная</span>
-              <span class="brcrumb__item">Услуги</span>
+              <a href="#" class="brcrumb__item">Главная</a>
+              <a href="#" class="brcrumb__item">Услуги</a>
               <span class="brcrumb__item brcrumb__item--active">SEO (продвижение в поисковых системах)</span>
             </div>
           </div>
@@ -84,18 +88,20 @@
             <span>Мы подберем вариант</span></h2>
           </div>
           <div class="col-12">
-            <form action="POST" class="form">
+            <form action="" method="POST" class="form">
               <h3 class="form__title">Оставьте заявку на <span>бесплатную консультацию</span> специалиста!</h3>
               <div class="form__wrap">
                 <div class="form__input-wrap">
-                  <input type="text" id="apply_name" class="form__input" placeholder="Ваше имя">
+                  <input type="text" id="apply_name" class="form__input" placeholder="Ваше имя" required>
                   <label for="apply_name" class="form__icon form__icon--name"></label>
                 </div>
                 <div class="form__input-wrap">
-                  <input type="text" id="apply_tel" class="form__input" placeholder="Ваш телефон">
-                  <label for="apply_tel" class="form__icon form__icon--tel"></label>
+                  <input type="text" id="apply_tel" class="form__input" placeholder="Ваш телефон" required>
+                  <label for="apply_tel" class="form__icon form__icon--phone"></label>
                 </div>
-                <button type="submit" class="button button--warn-lg">Отправить</button>
+                <div class="form__input-wrap">
+                  <button type="submit" class="button button--warn-lg">Отправить</button>
+                </div>
               </div>
             </form>
           </div>
@@ -108,17 +114,17 @@
     </section><!-- end Section: Banner-Top -->
 
     <!-- Section: Why We -->
-    <section class="section">
+    <section class="section section--pt105">
       <div class="container">
         <div class="row">
           <div class="col-12 px-4">
-            <p class="text text--bold text--fs18 text-center">У вас уже есть свой сайт. Замечательно, половина пути пройдена! Но как сделать так, чтобы ваша целевая аудитория нашла его и узнала о ваших товарах и услугах? Всё просто – заказать SEO-продвижение в компании WEB ALTERNATIVE.</p>
+            <p class="text text--bold text--fs18 text-center mb-0">У вас уже есть свой сайт. Замечательно, половина пути пройдена! Но как сделать так, чтобы ваша целевая аудитория нашла его и узнала о ваших товарах и услугах? Всё просто – заказать SEO-продвижение в компании WEB ALTERNATIVE.</p>
           </div>
         </div>
       </div>
     </section><!-- end Section: Why We -->
 
-    <!-- Section: Tiles -->
+    <!-- Section: Tiles with Back -->
     <section class="section">
       <div class="row no-gutters">
         <!-- Tile -->
@@ -129,9 +135,10 @@
             <div class="tile__back tile__back--warning">
               <p class="tile__back-title">Что такое SEO продвижение<br>
               и почему вам оно НУЖНО?</p>
-              <p class="tile__back-text">Простым языком, это интернет продвижение сайта в поисковых системах. В сети - миллионы сайтов, и с каждым днем их становится всё больше. Чтобы найти товар, люди пользуются поисковыми системами, которые выдают сотни ссылок на конкретные компании, предлагающие свои товары и услуги. Как думаете, у кого больше шансов получить клиента – у сайтов, находящихся в начале списка или на десятой странице? На этот случай у нас есть проверенный план, который обеспечит вам продвижение сайта в ТОП поисковых запросов.</p>
+              <p class="tile__text">Простым языком, это интернет продвижение сайта в поисковых системах. В сети - миллионы сайтов, и с каждым днем их становится всё больше. Чтобы найти товар, люди пользуются поисковыми системами, которые выдают сотни ссылок на конкретные компании, предлагающие свои товары и услуги. Как думаете, у кого больше шансов получить клиента – у сайтов, находящихся в начале списка или на десятой странице? На этот случай у нас есть проверенный план, который обеспечит вам продвижение сайта в ТОП поисковых запросов.</p>
               <a href="#" class="button button--light button--centered">Узнать подробнее</a>
             </div>
+            <div class="tile__frame"></div>
           </div>
         </div><!-- end Tile -->
         <!-- Tile -->
@@ -142,10 +149,11 @@
             <div class="tile__back tile__back--primary">
               <p class="tile__back-title">Почему важна внутренняя<br>
               оптимизация сайта?</p>
-              <p class="tile__back-text">Раскрутка любого проекта проходит в несколько этапов. Процедура внутренней оптимизации призвана сделать ваш сайт лучше, увеличить шансы на вывод в топ поисковой выдачи.</p>
-              <p class="tile__back-text">Это предварительный этап работ, благодаря которому появится прочный фундамент для выстраивания бизнеса в интернете. Наши специалисты знают всё об эффективной оптимизации сайтов. Мы проанализируем имеющиеся тексты и изображения, навигацию по сайту, тщательно проверим код на наличие серьезных ошибок, протестируем юзабилити. Проведение предварительных работ позволит сделать ваш сайт более заметным в интернете, увеличить его позиции в поисковой выдаче по интересующим вас поисковым запросам.</p>
+              <p class="tile__text">Раскрутка любого проекта проходит в несколько этапов. Процедура внутренней оптимизации призвана сделать ваш сайт лучше, увеличить шансы на вывод в топ поисковой выдачи.</p>
+              <p class="tile__text">Это предварительный этап работ, благодаря которому появится прочный фундамент для выстраивания бизнеса в интернете. Наши специалисты знают всё об эффективной оптимизации сайтов. Мы проанализируем имеющиеся тексты и изображения, навигацию по сайту, тщательно проверим код на наличие серьезных ошибок, протестируем юзабилити. Проведение предварительных работ позволит сделать ваш сайт более заметным в интернете, увеличить его позиции в поисковой выдаче по интересующим вас поисковым запросам.</p>
               <a href="#" class="button button--light button--centered">Узнать подробнее</a>
             </div>
+            <div class="tile__frame"></div>
           </div>
         </div><!-- end Tile -->
         <!-- Tile -->
@@ -156,7 +164,7 @@
             <div class="tile__back tile__back--warning">
               <p class="tile__back-title">Что дает раскрутка сайта в<br>
               основных поисковых системах?</p>
-              <p class="tile__back-text">У вас уже есть свой сайт. Замечательно, половина пути пройдена! Но как сделать так, чтобы ваша целевая аудитория нашла его и узнала о ваших товарах и услугах? Всё просто – заказать SEO продвижение сайта в компании WEB ALTERNATIVE.</p>
+              <p class="tile__text">У вас уже есть свой сайт. Замечательно, половина пути пройдена! Но как сделать так, чтобы ваша целевая аудитория нашла его и узнала о ваших товарах и услугах? Всё просто – заказать SEO продвижение сайта в компании WEB ALTERNATIVE.</p>
               <ul class="tile__back-list">
                 <li>Привлекать гораздо больше клиентов и увеличить продажи в несколько раз;</li>
                 <li>Развивать свою компанию в интернет-сообществе;</li>
@@ -164,6 +172,7 @@
               </ul>
               <a href="#" class="button button--light button--centered">Узнать подробнее</a>
             </div>
+            <div class="tile__frame"></div>
           </div>
         </div><!-- end Tile -->
         <!-- Tile -->
@@ -173,48 +182,197 @@
             стоимость продвижения сайта?</p>
             <div class="tile__back tile__back--primary">
               <p class="tile__back-title">Почему мы не указываем точную стоимость продвижения сайта?</p>
-              <p class="tile__back-text">Всё просто – цена продвижения сайта складывается из нескольких факторов и может существенно отличаться, исходя из потребностей каждого конкретного клиента. Мы проводим тщательный анализ вашего сайта, его текущие позиции в интернете и продумываем комплексный план по раскрутке.</p>
+              <p class="tile__text">Всё просто – цена продвижения сайта складывается из нескольких факторов и может существенно отличаться, исходя из потребностей каждого конкретного клиента. Мы проводим тщательный анализ вашего сайта, его текущие позиции в интернете и продумываем комплексный план по раскрутке.</p>
               <a href="#" class="button button--light button--centered">Узнать подробнее</a>
             </div>
+            <div class="tile__frame"></div>
           </div>
         </div><!-- end Tile -->
       </div>
-    </section><!-- end Section: Tiles -->
+    </section><!-- end Section: Tiles with Back -->
 
-    <!-- Section: Subscribe Form -->
-    <section class="section section--pt80">
+    <!-- Section: Advantages -->
+    <section class="section section--pt80 section--pb50">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
-            <form action="POST" class="form">
-              <input class="form__input" type="text" placeholder="Ваше имя" required>
-              <input class="form__input" type="email" placeholder="Ваш e-mail" required>
-              <button class="form__submit" type="submit">Хочу получать новости о скидках</button>
-              <div class="form__decor form__decor--left">
-                <div class="form__decor-arrow"></div>
-              </div>
-              <div class="form__decor form__decor--right">
-                <div class="form__decor-arrow"></div>
-              </div>
-            </form>
+          <div class="col-12">
+            <h2 class="section__title section__title--fw-bold section__title--mxw675">Основные преимущества продвижения сайтов от WEB ALTERNATIVE:</h2>
+            <ul class="list">
+              <li class="list__item list__item--warning">
+                <p class="list__item-title">Минимальные сроки</p>
+                <p class="list__item-descr">Наши SEO-специалисты провели не одну бессонную ночь, изучая различные методики и способы продвижения, поэтому поиск верного решения не займет много времени.</p>
+              </li>
+              <li class="list__item list__item--primary">
+                <p class="list__item-title">Разумный бюджет</p>
+                <p class="list__item-descr">Мы предложим только тот комплекс работ, который необходим непосредственно вам, не навязывая лишние услуги.</p>
+              </li>
+              <li class="list__item list__item--warning">
+                <p class="list__item-title">Абсолютная прозрачность отношений</p>
+                <p class="list__item-descr">Мы всегда отчитываемся по всем проведенным работам, с приложением графиков и статистики.</p>
+              </li>
+              <li class="list__item list__item--primary">
+                <p class="list__item-title">Поддержка клиента на любом этапе работы</p>
+                <p class="list__item-descr">Мы с удовольствием отвечаем на все вопросы о том, что происходит с вашим сайтом и почему. Да-да, даже на самые, казалось бы, простые и примитивные. Мы ценим наших клиентов и стараемся всё сложное объяснить, как можно проще.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section><!-- end Section: Subscribe Form -->
+    </section><!-- end Section: Advantages -->
+
+    <!-- Section: Call Me -->
+    <section class="section section--bckgr-primary section--py38">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 px-4">
+            <h2 class="section__title section__title--light section__title--centered section__title--upcase mb-4">Кликните на кнопку</h2>
+            <div class="decor decor--centerize decor--callme mb-4">
+              <a href="#" class="button button--warn-lg button--link">Отправить</a>
+            </div>
+            <p class="text text--fs18 text--light text-center mb-0">И наш менеджер позвонит вам в удобное время и ответит на все интересующие вопросы</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- end Section: Call Me -->
+
+    <!-- Section: Tiles with Back -->
+    <section class="section">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <h2 class="section__title section__title--fw-light mb-4">Посмотрите наши работы</h2>
+          </div>
+          <!-- Tile -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="tile tile--work tile--4">
+              <p class="tile__title tile__title--big">Пироэффект</p>
+              <p class="tile__text">Интернет-магазин фейерверков</p>
+              <div class="tile__frame tile__frame--warning"></div>
+            </div>
+          </div><!-- end Tile -->
+          <!-- Tile -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="tile tile--work tile--5">
+              <p class="tile__title tile__title--big">Восточный Экспресс Банк</p>
+              <p class="tile__text">Сайт для услуги Восточного Экспресс Банка</p>
+              <div class="tile__frame tile__frame--warning"></div>
+            </div>
+          </div><!-- end Tile -->
+          <!-- Tile -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="tile tile--work tile--6">
+              <p class="tile__title tile__title--big">Запас Прочности</p>
+              <p class="tile__text">Магазин по продаже грузоподъемного и строительного оборудования</p>
+              <div class="tile__frame tile__frame--warning"></div>
+            </div>
+          </div><!-- end Tile -->
+          <!-- Tile -->
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="tile tile--work tile--7">
+              <p class="tile__title tile__title--big">Пеинтбол-парк</p>
+              <p class="tile__text">Сайт для спортивно-развлекательного комплекса</p>
+              <div class="tile__frame tile__frame--warning"></div>
+            </div>
+          </div><!-- end Tile -->
+        </div>
+      </div>
+    </section><!-- end Section: Tiles with Back -->
+
+    <!-- Section: Slider -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section__title section__title--fw-light mb-4">Нам доверяют:</h2>
+            <div class="carousel">
+              <div class="carousel__wrap">
+                <div class="owl-carousel">
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                  <div class="carousel__item"></div>
+                </div>
+              </div>
+              <div class="carousel__navs"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section><!-- end Section: Slider -->
   </main><!-- end main wrapper -->
 
   <!-- Footer -->
   <footer class="footer">
-      <p class="footer__text">
-        <a href="#" class="footer__link">Политика конфиденциальности</a> | <a href="#" class="footer__link">Публичная оферта</a>
-      </p>
-      <p class="footer__text">
-        Публичная программа: <a href="#" class="footer__link">Регистрация</a> | <a href="#" class="footer__link">Вход</a>
-      </p>
-      <p class="footer__text">
-        Клиентский кабинет: <a href="#" class="footer__link">Вход</a>
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-xl-3 d-flex d-lg-block flex-column align-items-center mb-5 mb-lg-0">
+          <div class="footer__logo"></div>
+          <div class="footer__contacts">
+            <div class="footer__icon-adress"></div>
+            <div class="footer__adress">
+              <p>ул. Волочаевская, 8г</p>
+              <p>тел.: (4212) 25-30-85</p>
+              <p class="footer__tel2">(4212) 470-300</p>
+            </div>
+          </div>
+          <a href="http://web-alt.ru/page/contacts" class="footer__map">
+            <div class="footer__icon-map"></div>
+            <div class="footer__icon-arrow"></div>
+            <p class="footer__map-descr">Найдите нас на карте</p>
+          </a>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-5 px-lg-0 mb-5 mb-lg-0">
+          <form action="" method="POST" class="form">
+            <h3 class="form__title form__title--footer">Оставьте заявку или напишите вопрос и получите <span>бесплатную консультацию</span> специалиста!</h3>
+            <div class="form__wrap">
+              <div class="form__input-wrap form__input-wrap--w100">
+                <input type="text" id="apply_name" class="form__input form__input--footer" placeholder="Ваше имя" required>
+                <label for="apply_name" class="form__icon form__icon--name"></label>
+                <p class="form__asterisk">*</p>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__input-wrap form__input-wrap--w100">
+                <input type="text" id="apply_email" class="form__input form__input--footer" placeholder="Ваш e-mail" required>
+                <label for="apply_email" class="form__icon form__icon--mail"></label>
+                <p class="form__asterisk">*</p>
+              </div>
+              <div class="form__input-wrap form__input-wrap--w100">
+                <input type="text" id="apply_tel" class="form__input form__input--footer" placeholder="Ваш телефон" required>
+                <label for="apply_tel" class="form__icon form__icon--phone"></label>
+                <p class="form__asterisk">*</p>
+              </div>
+            </div>
+            <div class="form__wrap">
+              <div class="form__input-wrap form__input-wrap--w100">
+                <textarea class="form__textarea form__textarea--footer" placeholder="Текст сообщения"></textarea>
+                <p class="form__asterisk">*</p>
+              </div>
+            </div>
+            <div class="form__wrap justify-content-center justify-content-lg-end">
+              <button type="submit" class="button button--warn-lg button--empty">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-lg-4 d-flex d-lg-block flex-column align-items-center">
+          <a href="#" class="footer__fb"></a>
+          <div class="footer__socials">
+            <a href="https://www.instagram.com/web_alternative/" class="footer__socials-inst"></a>
+            <a href="https://www.facebook.com/webalt/" class="footer__socials-fb"></a>
+            <a href="https://vk.com/webaltru" class="footer__socials-vk"></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <!-- end Footer -->
+
+  <a href="#" class="menu menu--fixed">
+    <div class="menu__icon"></div>
+    <p class="menu__text">История компании</p>
+  </a>
 </body>
 </html>

@@ -1,24 +1,13 @@
 .logo {
   display: flex;
   align-items: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
   
   &__img {
-    @extend %logo-color-2;
     margin-right: 18px;
     margin-left: 18px;
-  }
 
-  &__name {
-    margin-left: rem(14);
-    font-size: rem(26);
-    text-transform: uppercase;
-    letter-spacing: -1.17px;
-  }
-
-  @media screen and (max-width: $phoneWidth) {
-
-    &__name {
-      display: none;
-    }
+    @extend %logo-color-2;
   }
 }

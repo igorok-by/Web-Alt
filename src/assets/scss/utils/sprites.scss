@@ -1,107 +1,114 @@
 
 $background: url(/assets/img/sprites.png) no-repeat;
 
+%logo-color-3 {
+  background: $background; 
+	background-position: 0 0;
+	width: 230px;
+	height: 128px;
+}
+
 %logo-color-1 {
-  background: $background;
-	background-position: -226px -2px ;
+  background: $background; 
+	background-position: -234px -71px ;
 	width: 120px;
 	height: 65px;
 }
 
 %logo-color-2 {
-  background: $background;
-  background-position: 0 -134px ;
-  width: 62px;
-  height: 33px;
-}
-
-%logo-color-3 {
-  background: $background;
-  background-position: 0 0;
-  width: 230px;
-  height: 128px;
+  background: $background; 
+	background-position: -113px -133px ;
+	width: 62px;
+	height: 33px;
 }
 
 %logo-mono-1 {
-  background: $background;
-	background-position: -225px -72px ;
+  background: $background; 
+	background-position: -233px 0;
 	width: 119px;
 	height: 65px;
 }
 
+%footer-1 {
+  background: $background; 
+  background-position: 0 -131px ;
+  width: 106px;
+  height: 106px;
+}
+
 %icon-arr-1 {
-  background: $background;
-  background-position: -71px -135px ;
+  background: $background; 
+  background-position: -180px -136px ;
   width: 23px;
   height: 25px;
 }
 
 %icon-arr-2 {
-  background: $background;
-	background-position: -100px -135.00003051757812px ;
+  background: $background; 
+	background-position: -207px -137px ;
 	width: 23px;
 	height: 25px;
 }
 
-%icon-hand {
-  background: $background;
-	background-position: 0 -173px ;
-	width: 37px;
-	height: 51px;
-}
-
-%icon-support {
-  background: $background;
-	background-position: -131px -133px ;
-	width: 48px;
-	height: 52px;
-}
-
-%icon-history {
-  background: $background;
-	background-position: -302px -155.00003051757812px ;
-	width: 26px;
-	height: 24px;
+%icon-arrMap {
+  background: $background; 
+	background-position: -113px -173px ;
+	width: 21px;
+	height: 47px;
 }
 
 %icon-adress {
-  background: $background;
-  background-position: -82px -172px ;
-  width: 24px;
-  height: 27px;
+  background: $background; 
+	background-position: -320px -147px ;
+	width: 24px;
+	height: 27px;
 }
 
-%icon-service {
-  background: $background;
-	background-position: -231px -153px ;
-	width: 15px;
-	height: 22px;
+%icon-mail {
+  background: $background; 
+	background-position: -293px -149px ;
+	width: 16px;
+	height: 16px;
 }
 
-%icon-tel {
-  background: $background;
-	background-position: -186px -133px ;
+%icon-phone {
+  background: $background; 
+	background-position: -259px -146px ;
 	width: 27px;
 	height: 27px;
 }
 
-%icon-inst {
-  background: $background;
-  background-position: -257px -151px ;
-  width: 30px;
-  height: 30px;
+%icon-service {
+  background: $background; 
+	background-position: -236px -145px ;
+	width: 15px;
+	height: 22px;
 }
 
 %icon-fb {
-  background: $background;
-  background-position: -44px -174px ;
-  width: 30px;
-  height: 30px;
+  background: $background; 
+	background-position: -232px -179px ;
+	width: 30px;
+	height: 30px;
+}
+
+%icon-inst {
+  background: $background; 
+	background-position: -195px -178px ;
+	width: 30px;
+	height: 30px;
 }
 
 %icon-vk {
-  background: $background;
-	background-position: -185px -168px ;
+  background: $background; 
+	background-position: -151px -178px ;
 	width: 30px;
 	height: 30px;
+}
+
+%icon-history {
+  background: $background;
+  background-position: -319px -213px;
+  width: 26px;
+  height: 24px;
 }

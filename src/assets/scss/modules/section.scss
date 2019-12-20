@@ -1,14 +1,58 @@
 .section {
-  padding-top: 65px;
+  padding-top: 55px;
   
-  &--pt80 {
-    padding-top: 80px;
+  &--pt105 {
+    padding-top: 105px;
   }
 
-  @media screen and (max-width: $tableWidth) {
+  &--pb50 {
+    padding-bottom: 50px;
+  }
+
+  &--py38 {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  &--bckgr-primary {
+    background-color: $primary-color;
+  }
+
+  &__title {
+    margin-bottom: rem(33);
+    color: #413e3e;
+    font-size: rem(30);
+  }
+  
+  &__title--fw-bold {
+    font-weight: 700;
+  }
+  
+  &__title--fw-light {
+    font-weight: 300;
+    color: #161616;
+  }
+  
+  &__title--mxw675 {
+    max-width: 675px;
+  }
+
+  &__title--light {
+    color: $default-color;
+  }
+
+  &__title--upcase {
+    text-transform: uppercase;
+  }
+
+  &__title--centered {
+    text-align: center;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
     
-    &--pt80 {
-      padding-top: 65px;
+    &--pt105 {
+      padding-top: 55px;
     }
   }
 }

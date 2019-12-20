@@ -1,13 +1,10 @@
 .link {
-
-  &:hover {
-    
-  }
   
   &--nav {
-    padding: 15px 26px;
     display: block;
+    padding: 15px 26px;
     color: $default-color;
+    text-align: right;
     transition: $default-transition;
   }
   

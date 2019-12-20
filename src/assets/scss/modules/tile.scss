@@ -2,6 +2,9 @@
   position: relative;
   height: 248px;
   padding-top: 140px;
+  padding-left: 7%;
+  padding-right: 7%;
+  color: $default-color;
 
   &--1 {
     background: center / cover no-repeat url(/assets/img/tile-1.png);
@@ -15,19 +18,48 @@
     background: center / cover no-repeat url(/assets/img/tile-3.png);
   }
 
+  &--4 {
+    background: center / cover no-repeat url(/assets/img/tile-4.png);
+  }
+
+  &--5 {
+    background: center / cover no-repeat url(/assets/img/tile-5.png);
+  }
+
+  &--6 {
+    background: center / cover no-repeat url(/assets/img/tile-6.png);
+  }
+
+  &--7 {
+    background: center / cover no-repeat url(/assets/img/tile-7.png);
+  }
+
+  &--work {
+    height: 201px;
+    padding: 42px 11% 42px 13%;
+  }
+
   &__title {
+    position: relative;
+    z-index: 1;
     font-size: rem(20);
-    color: $default-color;
     text-align: center;
+  }
+
+  &__title--big {
+    margin-bottom: 0;
+    font-size: rem(26);
+    text-align: left;
   }
 
   &__back {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 0;
     z-index: 1;
+    transform: translateY(-50%);
     padding: 30px 27px;
-    color: $default-color;
+    font-size: rem(16);
     opacity: 0;
     visibility: hidden;
     transition: $default-transition;
@@ -47,7 +79,10 @@
     text-align: center;
   }
 
-  &__back-text {
+  &__text {
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
     margin-bottom: 25px;
   }
 
@@ -59,64 +94,29 @@
       margin-bottom: 7px;
     }
   }
+  
+  &__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 93%;
+    height: 90%;
+    margin: auto;
+    border: 1px solid $default-color;
+    transition: $default-transition;
+  }
 
-  &:hover &__back {
+  &__frame--warning {
+    background-color: $warning-color;
+    border: none;
+    opacity: 0;
+  }
+
+  &:hover &__back,
+  &:hover &__frame--warning {
     opacity: 1;
     visibility: visible;
-  }
-
-  @media screen and (min-width: $desktopWidth) {
-    
-    &--ml-lg-19 {
-      margin-left: 19px;
-    }
-  
-    &--mr-lg-19 {
-      margin-right: 19px;
-    }
-  }
-  
-  @media screen and (max-width: $desktopWidth) {
-    
-    &__popup {
-      padding: 22px;
-    }
-  }
-
-  @media screen and (max-width: $tableWidth) {
-
-    &__img {
-      position: static;
-      display: block;
-      height: 300px;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__price {
-      text-align: center;
-    }
-
-    &__text {
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__popup-text {
-      max-width: 480px;
-    }
-
-    &__popup:before {
-      right: 25%;
-    }
-  }
-
-  @media screen and (max-width: $phoneWidth) {
-
-    &__popup::before {
-      display: none;
-    }
   }
 }
